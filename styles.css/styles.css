@@ -53,11 +53,11 @@ li
   margin-right: auto;
   padding-right: 15px;
   padding-left: 15px;
-  outline: 2px solid #2196f3;
 }
 
 .title {
-  margin-bottom: 94px;
+ padding-bottom: 94px;
+ padding-top: 94px;
   text-align: center;
 }
 
@@ -160,7 +160,7 @@ li
 
 /* Hero */
 .hero-title {
-  margin: 0px auto 94px;
+  margin: 0px auto;
   padding-top: 200px;
   padding-bottom: 200px;
   width: 1600px;
@@ -188,14 +188,12 @@ li
 .benefits {
   justify-content: center;
   display: flex;
-  outline: 2px solid var(--title-text-color);
 }
 
 
 .container .benefits li {
   list-style-type: none;
   width: 270px;
-  outline: 2px solid tomato;
 }
 .container .benefits li + li {
   margin-left: 30px;
@@ -207,16 +205,16 @@ li
   color: var(--title-text-color);
   line-height: 1.14;
   letter-spacing: 0.03em;
-  outline: 2px solid tomato;
 }
 .benefits .text-benefit {
   color: var(--text);
   line-height: 1.71;
   letter-spacing: 0.03em;
-  outline: 2px solid navy;
 }
 
 /* directions */
+
+.direction {padding-top: 0;}
 
 .box {
  display: flex;
@@ -324,8 +322,6 @@ li
   font-size: 0;
 }
 
-.title.portfolio-title {margin-top: 94px;}
-
 .cases-block {
   margin-top: 50px;
 }
@@ -350,6 +346,8 @@ li
   
   margin-right: 0;
 }
+
+.case-element:nth-last-child(-n + 3) {margin-bottom: 0;}
 
 
 
