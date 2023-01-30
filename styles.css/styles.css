@@ -223,8 +223,8 @@ li
 .case-element .case-link .image {display: block; margin-right: 0;
 }
 
-.container .box li + li {
-  margin-left: 30px;
+.benefits li {
+  list-style-type: none;
 }
 
 /* Command */
@@ -429,10 +429,4 @@ li
 .contact-footer-town:hover,
 .contact-footer-town:focus {
   color: var(--accent-color);
-}
-
-
-.footer-contacts li:not(:last-child) {
-  display: block;
-  margin-bottom: 9px;
 }
