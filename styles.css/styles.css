@@ -212,20 +212,27 @@ li
   letter-spacing: 0.03em;
 }
 
+.benefits li {
+  list-style-type: none;
+}
 /* directions */
 
 .direction {padding-top: 0;}
+
+.box li +li {margin-left: 30px;}
 
 .box {
  display: flex;
 }
 
+.direction-item {display: flex;}
+
+
+
 .case-element .case-link .image {display: block; margin-right: 0;
 }
 
-.benefits li {
-  list-style-type: none;
-}
+
 
 /* Command */
 
@@ -238,7 +245,7 @@ li
 .team-cards {display: flex;}
 
 .team-cards li {
-  display: inline-block;
+
   width: 270px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
