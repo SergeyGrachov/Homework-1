@@ -64,6 +64,7 @@ li
 .header {border-bottom: 1px solid #ECECEC;}
 
 /* Logo */
+
 .main-nav {
   display: flex;
   align-items: center;
@@ -75,6 +76,8 @@ li
 /* Main nav */
 
 .main-link {
+  margin-right: 93px;
+
   color: var(--accent-color);
   font-family: "Raleway";
   font-weight: 700;
@@ -83,8 +86,9 @@ li
   text-decoration: none;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   
-  margin-right: 93px;
+  
 }
+
 .main-link-studio {
   color: var(--title-text-color);
 }
@@ -96,6 +100,7 @@ li
   align-items: center;
   justify-content: space-between;
 }
+
 .site-nav .item:not(:last-child) {
   margin-right: 40px;
 }
@@ -120,10 +125,13 @@ li
 .site-nav a:focus {
   color: var(--accent-color);
 }
+
 .site-nav .link.current {
   color: var(--accent-color);
 }
+
 /* Header contacts */
+
 .contact-header {
   color: var(--text);
   font-weight: 500;
@@ -131,6 +139,7 @@ li
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+
 .contact-header:hover,
 .contact-header:focus {
   color: var(--accent-color);
@@ -146,8 +155,6 @@ li
 
 /* Titles */
 
-
-
 .title .section-title {
   margin-top: 0px;
   margin-bottom: 50px;
@@ -159,6 +166,7 @@ li
 }
 
 /* Hero */
+
 .hero-title {
   margin: 0px auto;
   padding-top: 200px;
@@ -168,6 +176,7 @@ li
 
   background-color: var(--hero-bg-color);
 }
+
 .hero-text {
   display: inline-block;
   text-align: center;
@@ -185,16 +194,17 @@ li
 }
 
 /* Benefits */
+
 .benefits {
   justify-content: center;
   display: flex;
 }
 
-
 .container .benefits li {
   list-style-type: none;
   width: 270px;
 }
+
 .container .benefits li + li {
   margin-left: 30px;
 }
@@ -215,6 +225,7 @@ li
 .benefits li {
   list-style-type: none;
 }
+
 /* directions */
 
 .direction {padding-top: 0;}
@@ -227,12 +238,8 @@ li
 
 .direction-item {display: flex;}
 
-
-
 .case-element .case-link .image {display: block; margin-right: 0;
 }
-
-
 
 /* Command */
 
@@ -278,6 +285,7 @@ li
 }
 
 /* Buttons */
+
 /* Button primary*/
 .button {
   margin-left: auto;
@@ -297,6 +305,7 @@ li
 }
 
 /* Button secondary */
+
 .button-secondary {
   margin: 0;
   padding: 6px 22px;
@@ -322,19 +331,18 @@ li
 /* Portfolio */
 
 /* No display H1 */
+
 .no-display {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-    
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
-  
+position: absolute;
+width: 1px;
+height: 1px;
+margin: -1px;
+border: 0;
+padding: 0;
+white-space: nowrap;
+clip-path: inset(100%);
+clip: rect(0 0 0 0);
+overflow: hidden;
 }
 
 .cases-block {
@@ -375,8 +383,6 @@ li
   margin-left: 8px;
 }
 
-
-
 .cases .case-name {
   margin-top: 20px;
   margin-bottom: 4px;
@@ -386,6 +392,7 @@ li
   line-height: 2;
   letter-spacing: 0.06em;
 }
+
 .cases .case-discr {
   margin: 0;
   padding-left: 24px;
@@ -393,11 +400,13 @@ li
   line-height: 1.87;
   color: #757575;
 }
+
 .cases .case-link {
   text-decoration: none;
 }
 
 /* Footer */
+
 .logo-web-footer {
   display: block;
   margin-bottom: 20px;
@@ -408,11 +417,13 @@ li
   line-height: 1.19;
   text-decoration: none;
 }
+
 .logo-studio-footer {
   color: var(--primary-text-color);
 }
 
 /* Footer contacts */
+
 .footer {
   width: 1600px;
   margin: 0 auto;
