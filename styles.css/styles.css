@@ -22,17 +22,15 @@
   box-sizing: inherit;
 }
 
-body,
 h1,
 h2,
 h3,
 h4,
 p,
 ul,
-ol,
-li {
+ol {
   margin: 0;
-  padding-inline-start: 0;
+  padding: 0;
 }
 
 .list {
@@ -139,42 +137,46 @@ li {
 }
 
 /* Header contacts */
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
 
 .item .contact-header {
   padding-top: 32px;
   padding-bottom: 32px;
-  display: inline-block;
+  display: inline-flex;
   color: var(--text);
   font-size: 14px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+  align-items: center;
 }
 
 .contact-header:hover,
 .contact-header:focus {
   color: var(--accent-color);
-}
-.header-contacts {
-  display: flex;
-  margin-left: auto;
+  fill: var(--accent-color);
 }
 
 .header-contacts .item + .item {
+  display: inline-flex;
   margin-left: 50px;
 }
 
 /* Header icons */
 
-.mail-icon::before {
-  background-size: contain;
+.mail-icon {
+  display: flex;
   margin-right: 10px;
-  width: 16px;
-  height: 12px;
-  background-color: transparent;
-  background-image: url(../images/png/envelope.png);
-  background-repeat: no-repeat;
+  fill: var(--text);
+}
+
+.mail-icon:hover,
+.mail-icon:focus {
+  fill: var(--accent-color);
 }
 
 /* Titles */
@@ -236,7 +238,6 @@ li {
 }
 
 .container .benefits li {
-  list-style-type: none;
   width: 270px;
 }
 
@@ -261,8 +262,32 @@ li {
   text-align: start;
 }
 
-.benefits li {
-  list-style-type: none;
+.benefits li::before {
+  content: "";
+  display: flex;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: #f5f4fa;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Icons benefits */
+
+.benefit-antenna::before {
+  background-image: url(../images/png/antenna111.svg);
+}
+
+.benefit-clock::before {
+  background-image: url(../images/png/clock11.svg);
+}
+
+.benefit-diagram::before {
+  background-image: url(../images/png/diagram11.svg);
+}
+
+.benefit-astronaut::before {
+  background-image: url(../images/png/astronaut11.svg);
 }
 
 /* directions */
@@ -302,7 +327,6 @@ li {
 
 .team-cards li {
   text-align: center;
-  width: 270px;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 .team-cards li + li {
@@ -419,9 +443,8 @@ li {
 }
 
 .discr-outline {
-  border-right: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
+  border: 1px solid #eeeeee;
+  border-top: none;
   padding: 20px 24px;
 }
 
@@ -511,4 +534,22 @@ li {
 .contact-footer-town:hover,
 .contact-footer-town:focus {
   color: var(--accent-color);
+}
+
+/* pract */
+
+.linkedin {
+  display: block;
+}
+
+.button-ic {
+  background-color: #faa;
+  border-radius: 100%;
+  width: 150px;
+}
+
+.button-ic:hover,
+.button-ic:focus {
+  backgroung-color: var(--accent-color);
+  color: var(--primary-text-color);
 }
