@@ -571,7 +571,6 @@ img {
 /* Footer contacts */
 
 .footer {
-  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #212121;
