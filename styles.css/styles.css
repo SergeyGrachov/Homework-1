@@ -16,6 +16,7 @@
   --secondary-button-color: #f5f4fa;
   --background-color: #ffffff;
   --primary-button-hover: #188ce8;
+  --social-icons: #afb1b8;
 }
 
 * *::after *::before {
@@ -164,6 +165,10 @@ img {
 .contact-header:hover,
 .contact-header:focus {
   color: var(--accent-color);
+}
+
+.contact-header:hover .mail-icon,
+.contact-header:focus .mail-icon {
   fill: var(--accent-color);
 }
 
@@ -175,14 +180,9 @@ img {
 /* Header icons */
 
 .mail-icon {
-  display: flex;
+  display: block;
   margin-right: 10px;
   fill: var(--text);
-}
-
-.mail-icon:hover,
-.mail-icon:focus {
-  fill: var(--accent-color);
 }
 
 /* Titles */
@@ -268,20 +268,22 @@ img {
   text-align: start;
 }
 
-.benefits li::before {
-  content: "";
+.bgc-benefit {
   display: flex;
+  flex-basis: 270px;
   height: 120px;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 30px;
   background-color: #f5f4fa;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* Icons benefits */
 
-.benefit-antenna::before {
-  background-image: url(../images/png/antenna111.svg);
+.benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .benefit-clock::before {
@@ -322,6 +324,10 @@ img {
   display: flex;
 }
 
+.team-card {
+  background-color: var(--background-color);
+}
+
 .team-cards li {
   text-align: center;
   box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
@@ -345,12 +351,54 @@ img {
 }
 
 .section .position {
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 
   color: var(--text);
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+}
+
+/* Command icons */
+
+.social-bar {
+  margin-bottom: 30px;
+  display: inline-flex;
+
+  background-color: var(--background-color);
+}
+
+.social-block {
+  display: flex;
+  list-style: none;
+}
+
+.social-block .social-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-icon {
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.social-icon:hover,
+.social-icon:focus {
+  background-color: var(--accent-color);
+}
+
+.social-icon-elem {
+  fill: var(--social-icons);
+}
+
+.social-icon:hover .social-icon-elem,
+.social-icon:focus .social-icon-elem {
+  fill: var(--background-color);
+}
+
+.social-bar .social-block li {
+  box-shadow: none;
+  margin: 0;
 }
 
 /* Buttons */
@@ -466,6 +514,43 @@ img {
   margin-left: 8px;
 }
 
+/* Clients */
+
+.clients {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.client-item {
+  width: 170px;
+  height: 92px;
+
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.client-link {
+  display: flex;
+  width: 170px;
+  height: 92px;
+}
+
+.client-svg {
+  fill: #afb1b8;
+}
+
+.client-link:hover .client-svg,
+.client-link:focus .client-svg {
+  fill: var(--accent-color);
+}
+
+.client-item:hover,
+.client-item:focus {
+  border-color: var(--accent-color);
+}
+
 /* Footer */
 
 .logo-web-footer {
@@ -486,6 +571,7 @@ img {
 /* Footer contacts */
 
 .footer {
+  display: flex;
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: #212121;
@@ -516,29 +602,10 @@ img {
   color: var(--accent-color);
 }
 
-/* pract */
-
-.linkedin {
-  display: block;
-}
-
-.button-io {
-  display: flex;
-  cursor: pointer;
-  fill: gray;
-  border-radius: 100%;
-  width: 44px;
-  height: 44px;
-}
-
-.button-ic:hover,
-.button-ic:focus {
-  fill: var(--accent-color);
-}
-
-.div {
-  display: flex;
-  width: 44px;
-  border-radius: 50%;
-  background-color: navy;
+.footer-title {
+  font-size: 14px;
+  color: var(--primary-text-color);
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
