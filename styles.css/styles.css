@@ -206,8 +206,6 @@ img {
   padding-bottom: 200px;
   max-width: 1600px;
   text-align: center;
-
-  background-color: var(--hero-bg-color);
 }
 
 .hero-text {
@@ -494,9 +492,6 @@ img {
   overflow: hidden;
 }
 
-.cases-block {
-  margin-top: 50px;
-}
 .cases {
   display: flex;
   flex-wrap: wrap;
