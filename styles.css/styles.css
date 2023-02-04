@@ -1,23 +1,16 @@
-/* Основной текст  #FFFFFF */
-/* Вторичный текст  #212121 */
-/* Абзацы  #757575 */
-/* Акцент  #2196F3 */
-/* фон основной #F5F5F5 */
-/* Фон герой #2F303A */
-/* Фон вторичный #F5F4FA*/
-
 :root {
   --primary-text-color: #ffffff;
   --title-text-color: #212121;
   --accent-color: #2196f3;
   --text: #757575;
-  --hero-bg-color: #2f303a;
+  --hero-bg-color: #c4c4c4;
   --secondary-text-color: #212121;
   --secondary-button-color: #f5f4fa;
   --background-color: #ffffff;
   --primary-button-hover: #188ce8;
   --social-icons: #afb1b8;
   --social-icon-bcg: rgba(255, 255, 255, 0.1);
+  --team-bg: #f5f4fa;
 }
 
 * *::after *::before {
@@ -206,6 +199,7 @@ img {
   padding-bottom: 200px;
   max-width: 1600px;
   text-align: center;
+  background-color: var(--hero-bg-color);
 }
 
 .hero-text {
@@ -316,7 +310,7 @@ img {
 .section.team {
   margin: 0;
   padding: 94px 0px;
-  background-color: #f5f4fa;
+  background-color: var(--team-bg);
 }
 
 .team-cards {
@@ -393,40 +387,6 @@ img {
 .social-icon:focus {
   fill: currentColor;
 }
-
-/* .social-block .social-item:not(:last-child) {
-  margin-right: 10px;
-} */
-
-/* .social.link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  background-color: var(--background-color);
-  border-radius: 50%;
-}
-
-.social-icon {
-  fill: var(--background-color);
-}
-
-.social-icon:hover,
-.social-icon:focus {
-  background-color: var(--accent-color);
-}
-
-.social-icon:hover,
-.social-icon:focus {
-  fill: var(--background-color);
-}
-
-.social-bar .social-block li {
-  box-shadow: none;
-} */
-
-/* Buttons */
-
-/* Button primary*/
 
 .button {
   margin-left: auto;
@@ -579,39 +539,6 @@ img {
 .client-item:focus {
   border-color: var(--accent-color);
 }
-
-/* .social-block {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  list-style: none;
-}
-
-.social-link {
-  display: flex;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background-color: var(--background-color);
-}
-
-.social-icon {
-  fill: var(--social-icons);
-}
-
-.social-link:hover,
-.social-link:focus {
-  background-color: var(--accent-color);
-  color: var(--background-color);
-}
-
-.social-icon:hover,
-.social-icon:focus {
-  fill: currentColor;
-} */
-/* Footer */
 
 .logo-web-footer {
   display: block;
