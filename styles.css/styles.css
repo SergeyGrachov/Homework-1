@@ -118,15 +118,14 @@ img {
   letter-spacing: 0.02em;
 }
 
-.item a {
+.item .nav-link {
   color: var(--secondary-text-color);
   text-decoration: none;
 }
 
-.site-nav a:hover,
-.site-nav a:focus {
+.site-nav .nav-link:hover,
+.site-nav .nav-link:focus {
   color: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 .site-nav .link.current {
@@ -138,6 +137,7 @@ img {
   position: relative;
   padding-top: 32px;
   padding-bottom: 32px;
+  transition: color var(--transition-dir) var(--cubik);
 }
 
 .nav-link::after {
@@ -174,12 +174,12 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   align-items: center;
+  transition: color var(--transition-dir) var(--cubik);
 }
 
 .contact-header:hover,
 .contact-header:focus {
   color: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 .contact-header:hover .mail-icon,
@@ -198,6 +198,7 @@ img {
   display: block;
   margin-right: 10px;
   fill: var(--text);
+  transition: fill var(--transition-dir) var(--cubik);
 }
 
 /* Titles */
@@ -314,6 +315,44 @@ img {
   display: flex;
 }
 
+.direction-item {
+  display: block;
+}
+
+.direction-thumb {
+  position: absolute;
+  transform: translateY(-100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+
+.box-label {
+  display: inline-flex;
+
+  color: var(--primary-text-color);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* .direction {
+  padding-top: 0;
+}
+
+.box .direction-item + .direction-item {
+  margin-left: 30px;
+}
+
+.box {
+  display: flex;
+}
+
 .direction-thumb::before {
   position: absolute;
   display: flex;
@@ -344,7 +383,7 @@ img {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-}
+} */
 
 /* Command */
 
@@ -412,25 +451,28 @@ img {
   display: flex;
   width: 44px;
   height: 44px;
+  color: var(--social-icons);
   border-radius: 50%;
   background-color: var(--background-color);
+  transition: color var(--transition-dir) var(--cubik),
+    background-color var(--transition-dir) var(--cubik);
 }
 
 .social-icon {
-  fill: var(--social-icons);
+  fill: currentColor;
+  transition: fill var(--transition-dir) var(--cubik);
 }
 
 .social-link:hover,
 .social-link:focus {
   background-color: var(--accent-color);
   color: var(--background-color);
-  transition: var(--transition-dir) var(--cubik);
 }
 
-.social-link:hover .social-icon,
+/* .social-link:hover .social-icon,
 .social-link:focus .social-icon {
   fill: currentColor;
-}
+} */
 
 /* Clients */
 
@@ -453,6 +495,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
   outline: transparent;
+  transition: border-color var(--transition-dir) var(--cubik);
 }
 
 .client-svg {
@@ -462,13 +505,15 @@ img {
 .client-link:hover,
 .client-link:focus {
   border-color: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
+}
+
+.client-svg {
+  transition: fill var(--transition-dir) var(--cubik);
 }
 
 .client-link:hover .client-svg,
 .client-link:focus .client-svg {
   fill: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 /* Button primary */
@@ -487,13 +532,14 @@ img {
   padding: 10px 32px;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
   border-radius: 4px;
+  transition: background-color var(--transition-dir) var(--cubik),
+    color var(--transition-dir) var(--cubik);
 }
 
 .button:hover,
 .buton:focus {
   color: var(--primary-text-color);
   background-color: var(--primary-button-hover);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 /* Button secondary */
@@ -521,6 +567,9 @@ img {
   cursor: pointer;
 
   border-radius: 4px;
+  transition: background-color var(--transition-dir) var(--cubik),
+    box-shadow var(--transition-dir) var(--cubik),
+    color var(--transition-dir) var(--cubik);
 }
 
 .button-secondary:focus,
@@ -529,7 +578,6 @@ img {
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 /* Portfolio */
@@ -549,10 +597,46 @@ img {
   overflow: hidden;
 }
 
+.overlay {
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  transform: translateY(100%);
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transition: transform var(--transition-dir) var(--cubik),
+    opacity var(--transition-dir) var(--cubik);
+}
+
 .cases {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+}
+
+.case-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.thumb-text {
+  position: absolute;
+  padding: 63px 24px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
 }
 
 .case-element {
@@ -563,13 +647,19 @@ img {
   display: block;
   text-decoration: none;
   outline: none;
+  transition: box-shadow var(--transition-dir) var(--cubik);
+}
+
+.case-link:hover .overlay,
+.case-link:focus .overlay {
+  transform: translateY(0%);
+  opacity: 1;
 }
 
 .case-link:hover,
 .case-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 .discr-outline {
@@ -622,12 +712,12 @@ img {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   line-height: 1.7;
+  transition: color var(--transition-dir) var(--cubik);
 }
 
 .contact-footer:hover,
 .contact-footer:focus {
   color: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 .contact-footer-town {
@@ -636,12 +726,12 @@ img {
   font-size: 14px;
   text-decoration: none;
   line-height: 1.7;
+  transition: color var(--transition-dir) var(--cubik);
 }
 
 .contact-footer-town:hover,
 .contact-footer-town:focus {
   color: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
 }
 
 .footer-title {
@@ -686,13 +776,21 @@ img {
 
 .social-icon-ftr {
   fill: var(--background-color);
+  transition: background-color var(--transition-dir) var(--cubik);
 }
 
 .social-link-ftr:hover,
 .social-link-ftr:focus {
   background-color: var(--accent-color);
-  transition: var(--transition-dir) var(--cubik);
 }
+
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+
+/* геометрия и стили заднего фона */
 
 .backdrop {
   position: fixed;
@@ -709,25 +807,37 @@ img {
   overflow-y: hidden;
 }
 
+/* геометрия и стили мадального окна */
+
 .modal {
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   top: 50%;
   left: 50%;
   width: 528px;
   min-height: 581px;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--text);
 }
+
+/* Задний фон */
 
 .backdrop.is-hidden {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
+
+/* кнопка закрыть */
 
 .modal-button {
   position: absolute;
@@ -745,43 +855,148 @@ img {
   cursor: pointer;
 }
 
-.case-thumb {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 1;
-  overflow: hidden;
-}
+/* Стили заголовка */
 
-.thumb-text {
-  position: absolute;
-  padding: 63px 24px;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.55;
+.modal-title {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 20px;
+  line-height: 1.15;
+
   letter-spacing: 0.03em;
 
-  color: #ffffff;
+  color: var(--title-text-color);
 }
 
-.overlay {
+.modal-label {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* margin for li */
+
+.modal-label:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+/* Стилизация бордера строк */
+
+.modal-label > input,
+.modal-label > textarea {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+/* геометрия строк */
+
+.modal-label > input {
+  padding: 5px 0;
+  padding-left: 30px;
+  padding-right: 5px;
+}
+
+/* ховер при наведении на строку */
+
+.modal-label > input:hover,
+.modal-label > input:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid transparent;
+}
+
+/* Ховер иконок в строках */
+
+.modal-label:hover > .modal-icon1,
+.modal-label:focus > .modal-icon1 {
+  fill: var(--accent-color);
+}
+
+/* геометрия комментария */
+
+.modal-label > textarea {
+  padding: 12px 16px;
+}
+
+/* Стили надписей над строками */
+
+.modal-name {
+  display: block;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+}
+
+/* Стили ссылки на договор снизу */
+
+.modal-link {
+  display: block;
+  font-size: 14px;
+  line-height: 1.71;
+
+  letter-spacing: 0.03em;
+}
+
+/* Стили окошка комментарии */
+
+textarea {
+  resize: none;
+}
+
+/* Стиль текста внутри окошка комментарии */
+
+.modal-label > textarea::placeholder {
+}
+
+/* Стили иконок строк */
+
+.modal-icon1 {
   position: absolute;
-
-  width: 100%;
-  height: 100%;
-  bottom: 0;
-  transform: translateY(100%);
-  background-color: rgba(33, 150, 243, 0.9);
-  opacity: 0;
+  bottom: 4px;
+  left: 12px;
 }
 
-.case-link:hover .overlay,
-.case-link:focus .overlay {
-  transform: translateY(0%);
-  opacity: 1;
-  transition: var(--transition-dir) var(--cubik);
+/* Стиль галочки под комментарием */
+
+.modal-checkbox:checked ~ .checkbox-icon {
+  fill: var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+/* спан для чекбокса */
+
+.modal-checkbox {
+  position: relative;
+
+  display: flex;
+}
+
+.checkbox-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 15px;
+  border: 2px solid #000;
+  border-radius: 4px;
+  background-color: #188ce8;
+}
+
+.checkbox-wrapper:checked {
+  background-color: #fff;
+}
+
+/* Иконка галочки чекбокса */
+
+.checkbox-icon {
+  fill: #fff;
+}
+
+.fff {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-color: red;
 }
