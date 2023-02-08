@@ -368,8 +368,24 @@
       </div>
 
 
+      
+      <form>
+       <strong class="strong">Підпишіться на розсилку</strong>
+<div class="send-form">
+  <label class="label-form"><input class="footer-input"  type="text" placeholder="E-mail">></label>
+  <button class="button-footer" type="submit">Підписатися<svg class="iconsend" width="24" height="24">
+    <use href="./images/symbol-defs.svg#icon-iconsend"> </use>
+  </svg>
+</button>
+  </div>
+      </form>
+      
+
+
     </div>
     </footer>
+
+
     <div class="backdrop is-hidden" data-modal>
       <div class="modal" >
 
@@ -379,30 +395,42 @@
         <label class="modal-label">
           
           <span class="modal-name">Ім'я </span>
-          <svg class="modal-icon1" width="18" height="18">
+          <svg class="modal-icon1" width="15" height="15">
           <use href="./images/symbol-defs.svg#icon-person-black">
           </use>
         </svg>
-        <input type="text">
+        <input class="label-input" type="text">
         
         </label>
         <label  class="modal-label"><span class="modal-name">Телефон</span><svg class="modal-icon1" width="18" height="18">
           <use href="./images/symbol-defs.svg#icon-phone-black">
           </use>
-        </svg><input type="tel"></label>
+        </svg><input class="label-input" type="tel"></label>
+
         <label class="modal-label"><span class="modal-name">Пошта</span><svg class="modal-icon1" width="18" height="18">
           <use href="./images/symbol-defs.svg#icon-email-black">
           </use>
-        </svg><input type="email"></label>
-        <label class="modal-label"><span class="modal-name">Коментар</span><textarea name="" id="" rows="6" placeholder="Введіть текст"></textarea>
+        </svg><input class="label-input" type="email"></label>
+
+        <label class="modal-label"><span class="modal-name">Коментар</span><textarea class="textarea" rows="6" placeholder="Введіть текст"></textarea>
         </label>
         
-        <label class="modal-checkbox"><input type="checkbox" class="checkbox-1 visuality-hidden">
-<span class="checkbox-wrapper">
-          
-</span></label>
-          <span class="modal-name">Погоджуюся з розсилкою та приймаю</span>
+        <div class="checkbox-thumb">
+        <label class="modal-label-check"><input class="modal-checkbox visuality-hidden" type="checkbox" >
+        <span class="checkbox-wrapper">
+        <svg class="wrapper-icon"  width="15" height="13">
+         <use href="./images/symbol-defs.svg#icon-iconcheck" >
+        </use>
+        </svg>
+
+   
+         </span></label>
+          <span class="name-checkbox">Погоджуюся з розсилкою та приймаю</span>
         <a class="modal-link" href="">Умови договору</a>
+        </div>
+
+        <button class="modal-btn-submit" type="submit">Відправити
+        </button>
         
         
 
@@ -419,14 +447,5 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
-
-
-
-
-
-<svg class="checkbox-icon" width="18" height="18">
-  <use href="./images/symbol-defs.svg#icon-iconcheck">
-  </use>
-</svg>
 
 

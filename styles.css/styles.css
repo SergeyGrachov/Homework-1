@@ -751,6 +751,7 @@ img {
 
 .box-contact {
   display: block;
+  width: 231px;
 }
 
 .footer-socials {
@@ -772,11 +773,11 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: var(--social-icon-bcg);
+  transition: background-color var(--transition-dir) var(--cubik);
 }
 
 .social-icon-ftr {
   fill: var(--background-color);
-  transition: background-color var(--transition-dir) var(--cubik);
 }
 
 .social-link-ftr:hover,
@@ -784,12 +785,64 @@ img {
   background-color: var(--accent-color);
 }
 
+.send-form {
+  display: flex;
+  flex-direction: row;
+  margin-left: 93px;
+  margin-top: 20px;
+}
+
+.strong {
+  margin-left: 93px;
+
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--background-color);
+}
+
+.button-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 50px;
+  margin-left: 12px;
+  color: var(--primary-text-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  border: none;
+  padding: 10px 28px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  border-radius: 4px;
+}
+
+.iconsend {
+  margin-left: 10px;
+  fill: var(--background-color);
+}
+
+.footer-input {
+  width: 358px;
+  height: 50px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 16px;
+}
 /**
   |============================
   | Modal window
   |============================
 */
-
 /* геометрия и стили заднего фона */
 
 .backdrop {
@@ -855,6 +908,14 @@ img {
   cursor: pointer;
 }
 
+.modal-icon {
+  transition: fill var(--transition-dir) var(--cubik);
+}
+
+.modal-button:hover > .modal-icon {
+  fill: var(--accent-color);
+}
+
 /* Стили заголовка */
 
 .modal-title {
@@ -884,24 +945,28 @@ img {
 
 /* Стилизация бордера строк */
 
-.modal-label > input,
+.modal-label > .label-input,
 .modal-label > textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
 
+.label-input {
+  transition: border-color var(--transition-dir) var(--cubik);
+}
+
 /* геометрия строк */
 
 .modal-label > input {
-  padding: 5px 0;
+  padding: 12px 0;
   padding-left: 30px;
   padding-right: 5px;
 }
 
 /* ховер при наведении на строку */
 
-.modal-label > input:hover,
-.modal-label > input:focus {
+.modal-label > .label-input:hover,
+.modal-label > .label-input:focus {
   border-color: var(--accent-color);
   outline: 1px solid transparent;
 }
@@ -929,49 +994,73 @@ img {
   letter-spacing: 0.03em;
 }
 
-/* Стили ссылки на договор снизу */
-
-.modal-link {
-  display: block;
+.name-checkbox {
   font-size: 14px;
   line-height: 1.71;
 
   letter-spacing: 0.03em;
 }
 
-/* Стили окошка комментарии */
-
-textarea {
-  resize: none;
+.modal-label-check {
+  display: inline-flex;
+  margin-right: 7px;
 }
 
+.checkbox-thumb {
+  margin-top: 25px;
+}
+
+/* Стили ссылки на договор снизу */
+
+.modal-link {
+  font-size: 14px;
+  line-height: 1.71;
+  margin-left: 3px;
+  letter-spacing: 0.03em;
+  color: var(--accent-color);
+}
+
+/* Стили окошка комментарии */
+
+.textarea {
+  resize: none;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.modal-label > .label-input:hover,
+.modal-label > .label-input:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid transparent;
+}
+
+.modal-label > .textarea:hover,
+.modal-label > .textarea:focus {
+  border-color: var(--accent-color);
+  outline: 1px solid transparent;
+}
 /* Стиль текста внутри окошка комментарии */
 
 .modal-label > textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+
+  color: rgba(117, 117, 117, 0.5);
 }
 
 /* Стили иконок строк */
 
 .modal-icon1 {
   position: absolute;
-  bottom: 4px;
+  bottom: 11px;
   left: 12px;
-}
-
-/* Стиль галочки под комментарием */
-
-.modal-checkbox:checked ~ .checkbox-icon {
-  fill: var(--accent-color);
-  background-color: var(--accent-color);
+  cursor: text;
+  transition: fill var(--transition-dir) var(--cubik);
 }
 
 /* спан для чекбокса */
-
-.modal-checkbox {
-  position: relative;
-
-  display: flex;
-}
 
 .checkbox-wrapper {
   display: flex;
@@ -979,9 +1068,12 @@ textarea {
   align-items: center;
   width: 16px;
   height: 15px;
-  border: 2px solid #000;
+  border: 2px solid #000000;
   border-radius: 4px;
-  background-color: #188ce8;
+
+  background-color: var(--background-color);
+  transition: background-color var(--transition-dir) var(--cubik),
+    border-color var(--transition-dir) var(--cubik);
 }
 
 .checkbox-wrapper:checked {
@@ -990,13 +1082,54 @@ textarea {
 
 /* Иконка галочки чекбокса */
 
-.checkbox-icon {
-  fill: #fff;
+.wrapper-icon {
+  fill: transparent;
+
+  transition: fill var(--transition-dir) var(--cubik),
+    background-color var(--transition-dir) var(--cubik);
+}
+/* Стиль галочки под комментарием */
+
+.modal-checkbox:checked + .checkbox-wrapper {
+  background-color: var(--accent-color);
+
+  border-color: #2196f3;
+
+  transition: background-color var(--transition-dir) var(--cubik),
+    border-color var(--transition-dir) var(--cubik);
 }
 
-.fff {
-  width: 20px;
-  height: 20px;
-  display: block;
-  background-color: red;
+.modal-checkbox:checked + .checkbox-wrapper > .wrapper-icon {
+  background-color: var(--accent-color);
+  fill: #ffffff;
+}
+
+/* Кнопка отправить */
+
+.modal-btn-submit {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0;
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  transition: background-color var(--transition-dir) var(--cubik);
+  cursor: pointer;
+}
+
+.modal-btn-submit:hover,
+.modal-btn-submit:focus {
+  background-color: var(--primary-button-hover);
 }
