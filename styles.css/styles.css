@@ -1088,7 +1088,6 @@ img {
   transition: fill var(--transition-dir) var(--cubik),
     background-color var(--transition-dir) var(--cubik);
 }
-/* Стиль галочки под комментарием */
 
 .modal-checkbox:checked + .checkbox-wrapper {
   background-color: var(--accent-color);
