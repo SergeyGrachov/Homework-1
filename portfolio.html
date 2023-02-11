@@ -14,7 +14,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.css"
     />
-    <link rel="stylesheet" href="styles.css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- <link rel="stylesheet" href="styles.css/styles.css" /> -->
   </head>
   <body class="body">
     <!-- Верхня лінія -->
@@ -86,7 +87,7 @@
         
         <!--Кейси -->
         
-          <ul class="cases list">
+          <ul class="case list">
             <li class="case-element">
               <a class="case-link" href="">
                 <div class="case-thumb"><img class="image" src="./images/site1.jpg" width="370" alt="notebook" />
@@ -227,51 +228,109 @@
       <div class="container footer-box">
         <!-- Лого футер -->
         <div class="box-contact">
-          <a class="logo-web-footer" href="">Web<span class="logo-studio-footer">Studio</span>
+          <a class="logo-web-footer" href=""
+            >Web<span class="logo-studio-footer">Studio</span>
           </a>
-    
+
           <!-- Контакти -->
-    
-    
+
           <address>
             <ul class="footer-contacts list">
               <li>
-                <a class="contact-footer-town" href="">м. Київ, пр-т Лесі Українки, 26</a>
+                <a class="contact-footer-town" href=""
+                  >м. Київ, пр-т Лесі Українки, 26</a
+                >
               </li>
               <li>
-                <a class="contact-footer" href="mailto:info@devstudio.com">info@devstudio.com</a>
+                <a class="contact-footer" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
               </li>
               <li>
                 <a class="contact-footer" href="tel:+380961111111">
-                  +38 096 111 11 11</a>
+                  +38 096 111 11 11</a
+                >
               </li>
             </ul>
           </address>
         </div>
-    
-    
+
         <div class="footer-socials">
           <h3 class="footer-title">приєднуйтесь</h3>
           <ul class="social-block-ftr">
-            <li class="social-item-ftr"><a class="social-link-ftr" href="https://www.instagram.com/" aria-label="інстаграм"
-                rel="noreferrer noopener"><svg class="social-icon-ftr" width="44" height="44">
-                  <use href="./images/symbol-defs.svg#icon-instawhite"> </use>
-                </svg></a></li>
-            <li class="social-item-ftr"><a class="social-link-ftr" href="https://twitter.com/?lang=ru" aria-label="твітер"
-                target="_blank" rel="noreferrer noopener"><svg class="social-icon-ftr" width="44" height="44">
-                  <use href="./images/symbol-defs.svg#icon-twitwhite"> </use>
-                </svg></a></li>
-            <li class="social-item-ftr"><a class="social-link-ftr" href="https://uk-ua.facebook.com/" aria-label="фейсбук"
-                target="_blank" rel="noreferrer noopener"><svg class="social-icon-ftr" width="44" height="44">
-                  <use href="./images/symbol-defs.svg#icon-facebookwhite"> </use>
-                </svg></a></li>
-            <li class="social-item-ftr"><a class="social-link-ftr" href="https://ua.linkedin.com/" aria-label="лінкедін"
-                target="_blank" rel="noreferrer noopener"><svg class="social-icon-ftr" width="44" height="44">
-                  <use href="./images/symbol-defs.svg#icon-linkidinwhite"> </use>
-                </svg></a></li>
+            <li class="social-item-ftr">
+              <a
+                class="social-link-ftr"
+                href="https://www.instagram.com/"
+                aria-label="інстаграм"
+                rel="noreferrer noopener"
+                ><svg class="social-icon-ftr" width="44" height="44">
+                  <use
+                    href="./images/symbol-defs.svg#icon-instawhite"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="social-item-ftr">
+              <a
+                class="social-link-ftr"
+                href="https://twitter.com/?lang=ru"
+                aria-label="твітер"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="social-icon-ftr" width="44" height="44">
+                  <use
+                    href="./images/symbol-defs.svg#icon-twitwhite"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="social-item-ftr">
+              <a
+                class="social-link-ftr"
+                href="https://uk-ua.facebook.com/"
+                aria-label="фейсбук"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="social-icon-ftr" width="44" height="44">
+                  <use
+                    href="./images/symbol-defs.svg#icon-facebookwhite"
+                  ></use></svg
+              ></a>
+            </li>
+            <li class="social-item-ftr">
+              <a
+                class="social-link-ftr"
+                href="https://ua.linkedin.com/"
+                aria-label="лінкедін"
+                target="_blank"
+                rel="noreferrer noopener"
+                ><svg class="social-icon-ftr" width="44" height="44">
+                  <use
+                    href="./images/symbol-defs.svg#icon-linkidinwhite"
+                  ></use></svg
+              ></a>
+            </li>
           </ul>
         </div>
-      </div> 
+
+        <form class="footer__form">
+          <strong class="strong">Підпишіться на розсилку</strong>
+          <div class="send-form">
+            <label class="label-form"
+              ><input
+                name="subscribe"
+                class="footer-input"
+                type="text"
+                placeholder="E-mail"
+            /></label>
+            <button class="button-footer" type="submit">
+              Підписатися<svg class="iconsend" width="24" height="24">
+                <use href="./images/symbol-defs.svg#icon-iconsend"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+  
     </footer>
     </body>
     
