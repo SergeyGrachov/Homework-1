@@ -1,18 +1,17 @@
 $var1: #ececec;
 
 .header {
-    border-bottom: 1px solid $var1;
+  border-bottom: 1px solid $var1;
 
+  &__container {
+    display: flex;
+    align-items: center;
+  }
 
-    &__container {
-        display: flex;
-        align-items: center;
-    }
-
-    &-contacts__icon {
-        display: block;
-        margin-right: 10px;
-        fill: var(--text);
-        transition: fill var(--transition-dir) var(--cubik);
-      }
+  &-contacts__icon {
+    display: block;
+    margin-right: 10px;
+    fill: var(--text);
+    transition: fill var(--transition-dir) var(--cubik);
+  }
 }
