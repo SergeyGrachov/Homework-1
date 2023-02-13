@@ -15,11 +15,3 @@
     --cubik: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-$var1: #212121;
-
-.body {
-	font-family: "Roboto", sans-serif;
-	background-color: var(--background-color);
-	letter-spacing: 0.03em;
-	color: $var1;
-}
